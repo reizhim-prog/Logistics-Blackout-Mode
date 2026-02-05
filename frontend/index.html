@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Logistics Blackout Mode</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <style>
+    body{font-family:system-ui,Arial;margin:16px}
+    .grid{display:grid;grid-template-columns:420px 1fr;gap:14px}
+    .card{border:1px solid #ddd;border-radius:10px;padding:12px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+    label{display:block;font-size:12px;color:#444;margin-bottom:4px}
+    input{padding:8px;width:120px}
+    button{padding:10px 14px;cursor:pointer}
+    #map{height:520px;border-radius:10px;border:1px solid #ddd}
+    table{border-collapse:collapse;width:100%;margin-top:10px}
+    th,td{border:1px solid #e3e3e3;padding:7px;font-size:12px;vertical-align:top}
+    th{background:#f6f6f6;text-align:left}
+    .muted{color:#666;font-size:12px}
+    .err{color:#b00020;white-space:pre-wrap;font-size:12px}
+    .pill{display:inline-block;padding:2px 8px;border:1px solid #ddd;border-radius:999px;font-size:12px}
+
+    /* LOGO */
+    .logo-wrap{
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 8px 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+      z-index: 2000;
+      pointer-events: none;
+    }
+    .logo-wrap img{
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    .leaflet-popup{
+      z-index: 3000 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<div class="logo-wrap">
+  <img src="/assets/logo-pertamina-patra-niaga.png" alt="Pertamina Patra Niaga">
+</div>
+
+<h2 style="margin:0 0 6px;">Logistics Blackout Mode</h2>
+<div class="muted">
+  API: <span id="api">http://127.0.0.1:8000</span> |
+  <span class="pill">Offline-ready CSV input</span>
+</div>
+
+<div class="grid" style="margin-top:12px;">
+  <div class="card">
+    <div class="row">
+      <div><label>Latitude</label><input id="lat" value="-7.20"></div>
+      <div><label>Longitude</label><input id="lon" value="106.80"></div>
+      <div><label>Magnitude</label><input id="mag" value="7.5"></div>
+      <div><label>Depth (km)</label><input id="depth" value="20"></div>
+      <div><label>Top N</label><input id="topn" value="10"></div>
+    </div>
+
+    <div class="row">
+      <button id="btn">Simulate</button>
+      <button id="dl" disabled>Simpan File CSV</button>
+    </div>
+
+    <div id="status" class="muted"></div>
+    <div id="err" class="err"></div>
+
+    <table id="tbl" style="display:none;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Kecamatan</th>
+          <th>Kab</th>
+          <th>Total</th>
+          <th>Explain</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div id="map"></div>
+    <div class="muted" style="margin-top:8px">
+      Klik marker untuk detail: skor + jarak episentrum + populasi + RS terdekat (+ air node kalau ada).
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const API = "http://127.0.0.1:8000";
+const el = (id)=>document.getElementById(id);
+
+let map = L.map('map').setView([-7.05, 107.1], 9);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 18, attribution: '&copy; OpenStreetMap'
+}).addTo(map);
+
+let markersLayer = L.layerGroup().addTo(map);
+let lastResults = null;
+
+function toCSV(rows){
+  if(!rows || !rows.length) return "";
+  const keys = Object.keys(rows[0]);
+  const esc = (v)=> `"${String(v ?? "").replace(/"/g,'""')}"`;
+  const lines = [keys.join(",")];
+  for(const r of rows){
+    lines.push(keys.map(k=>esc(r[k])).join(","));
+  }
+  return lines.join("\n");
+}
+
+function download(text, filename){
+  const blob = new Blob([text], {type:"text/csv;charset=utf-8;"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function clearUI(){
+  el("err").textContent = "";
+  el("status").textContent = "";
+  el("tbl").style.display = "none";
+  el("dl").disabled = true;
+  markersLayer.clearLayers();
+}
+
+el("dl").addEventListener("click", ()=>{
+  if(!lastResults) return;
+  download(toCSV(lastResults), "ranked_admin.csv");
+});
+
+el("btn").addEventListener("click", async ()=>{
+  clearUI();
+  el("status").textContent = "Calling /simulate ...";
+
+  const payload = {
+    lat: parseFloat(el("lat").value),
+    lon: parseFloat(el("lon").value),
+    mag: parseFloat(el("mag").value),
+    depth_km: parseFloat(el("depth").value),
+    top_n: parseInt(el("topn").value,10)
+  };
+
+  try{
+    const res = await fetch(API + "/simulate", {
+      method:"POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(payload)
+    });
+
+    const text = await res.text();
+    let data;
+    try{ data = JSON.parse(text); }
+    catch{ data = { detail: text }; }
+
+    el("status").textContent =
+      `OK. ${data.results.length} rows. package: ${(data.event.package_recommendation||[]).join(", ")}`;
+
+    const tbody = document.querySelector("#tbl tbody");
+    tbody.innerHTML = "";
+
+    data.results.forEach((r,i)=>{
+      const explain = [
+        `Dist ${Number(r.distance_to_epicenter_km ?? 0).toFixed(1)} km`,
+        `Pop ${Math.round(r.population_raw ?? 0).toLocaleString("id-ID")}`,
+        `RS: ${r.nearest_health_name ?? "-"} (${Number(r.nearest_health_km ?? 0).toFixed(1)} km)`,
+        (r.nearest_air_name
+          ? `Air: ${r.nearest_air_name} (${Number(r.nearest_air_km).toFixed(1)} km)`
+          : null)
+      ].filter(Boolean).join(" | ");
+
+      tbody.insertAdjacentHTML("beforeend",`
+        <tr>
+          <td>${i+1}</td>
+          <td><b>${r.admin_name}</b><br><span class="muted">${r.admin_id}</span></td>
+          <td>${r.kabupaten}</td>
+          <td>${Number(r.score_total).toFixed(4)}</td>
+          <td>${explain}</td>
+        </tr>
+      `);
+    });
+
+    el("tbl").style.display = "";
+    el("dl").disabled = false;
+
+    lastResults = data.results.map(r=>({
+      ...r,
+      reasons: Array.isArray(r.reasons) ? r.reasons.join(" | ") : r.reasons
+    }));
+
+    const bounds = [];
+    data.results.forEach((r,i)=>{
+      const popup = `
+        <b>#${i+1} ${r.admin_name}</b><br>
+        ${r.kabupaten} (ID ${r.admin_id})<br><br>
+        <b>Score</b>: ${Number(r.score_total).toFixed(4)}<br>
+        Hazard: ${Number(r.score_hazard).toFixed(4)} |
+        Exposure: ${Number(r.score_exposure).toFixed(4)} |
+        MedGap: ${Number(r.score_medgap).toFixed(4)}<br>
+        Dist epicenter: ${Number(r.distance_to_epicenter_km ?? 0).toFixed(1)} km<br>
+        Pop: ${Math.round(r.population_raw ?? 0).toLocaleString("id-ID")}<br>
+        RS terdekat: ${r.nearest_health_name ?? "-"} (${Number(r.nearest_health_km ?? 0).toFixed(1)} km)<br>
+        ${r.nearest_air_name
+          ? `Air node: ${r.nearest_air_name} (${Number(r.nearest_air_km).toFixed(1)} km)`
+          : ``}
+      `;
+      const m = L.marker([r.lat, r.lon]).bindPopup(popup);
+      m.addTo(markersLayer);
+      bounds.push([r.lat, r.lon]);
+      if(i===0) setTimeout(()=>m.openPopup(),300);
+    });
+
+    if(bounds.length) map.fitBounds(bounds,{padding:[30,30]});
+
+  }catch(e){
+    el("status").textContent = "Error";
+    el("err").textContent = String(e);
+  }
+});
+</script>
+</body>
+</html>

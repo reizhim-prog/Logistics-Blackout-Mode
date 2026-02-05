@@ -1,0 +1,260 @@
+facility_id,name,type,lat,lon,admin_id
+hf_000001,RS ZR Tedja,hospital,-6.9057428,107.6201443,320301
+hf_000002,RSAU Dr Salamun,hospital,-6.8643151,107.6048127,320302
+hf_000003,RS Paru dr Rotinsulu,hospital,-6.8777867,107.6064864,320303
+hf_000004,RSGM Kota Bandung,hospital,-6.9063359,107.614114,320304
+hf_000005,Rumah Sakit Ginjal Nyonya Ra Habibie,hospital,-6.8853403,107.6203433,320305
+hf_000006,Puskesmas Dago,hospital,-6.8759742,107.6185752,320306
+hf_000007,Puskesmas Cikutra Lama,hospital,-6.8913271,107.6272402,320307
+hf_000008,Puskesmas Jatinangor,hospital,-6.9324021,107.7774737,320308
+hf_000009,RSUD Leuwiliang,hospital,-6.5747943,106.6274907,320309
+hf_000010,Medika,hospital,-6.5762311,106.637131,320310
+hf_000011,Puskesmas Pasundan,hospital,-6.9273603,107.6089534,320311
+hf_000012,PUSKESMAS Sagaranten,hospital,-7.2159712,106.8835408,320312
+hf_000013,Rumah Sakit Bungsu,hospital,-6.918536,107.6134282,320313
+hf_000014,Puskesmas Cikajang,hospital,-7.3566975,107.8075445,320314
+hf_000015,Puskesmas Sarijadi,clinic,-6.8755508,107.5774069,320315
+hf_000016,Puskesmas Parung,hospital,-6.4202641,106.7329122,320316
+hf_000017,Klinik Tugu Sawangan,clinic,-6.4021264,106.7713038,320317
+hf_000018,Rumah Sakit Jiwa Hurip Waluya,hospital,-6.8835946,107.5941316,320318
+hf_000019,Rumah Sakit Ginjal,hospital,-6.8852642,107.6200766,320319
+hf_000020,Rumah Sakit Sukapura,hospital,-6.9361248,107.6567933,320320
+hf_000021,Puskesmas Astana Anyar,clinic,-6.9293073,107.6004821,320321
+hf_000022,Bidan Murni,clinic,-6.6320106,106.8261945,320322
+hf_000023,Posyandu Gandamekar 1,clinic,-7.295651,107.790692,320323
+hf_000024,Puskesmas Bayongbong,clinic,-7.2691,107.814624,320324
+hf_000025,Klinik 24 Jam,clinic,-6.6474079,106.8428135,320325
+hf_000026,Puskesmas Pangalengan,clinic,-7.1765292,107.5710694,320326
+hf_000027,Puskesmas Kec. Kota Baru,hospital,-6.4000828,107.4794156,320327
+hf_000028,Klinik Dokter Wida,hospital,-6.4194862,106.7546424,320328
+hf_000029,Praktek dokter umum pagi,hospital,-6.5501119,106.7987274,320329
+hf_000030,Puskesmas,hospital,-6.8970637,107.6072151,320330
+hf_000031,Puskesmas Nagreg,hospital,-7.0189556,107.8851036,320331
+hf_000032,Bidan,clinic,-6.4271398,106.7431714,320201
+hf_000033,"Yordian Yahya, SpS",clinic,-6.8589298,107.9188561,320202
+hf_000034,Pakuwon,hospital,-6.8571913,107.9237692,320203
+hf_000035,KSR,hospital,-6.8884504,107.5251138,320204
+hf_000036,Klinik Abinaya,clinic,-6.8684168,107.6207149,320205
+hf_000037,Puskesmas Bojongsoang,clinic,-6.9694356,107.6354167,320206
+hf_000038,Klinik Dokter Nurdin,hospital,-6.5168501,107.2287075,320207
+hf_000039,BRATACO,clinic,-6.9138207,107.6442248,320208
+hf_000040,Laboratorium Klinik PRAMITA,clinic,-6.9083821,107.6245158,320209
+hf_000041,UPT Layanan Kesehatan ITB – Bumi Medika Ganesa ITB,clinic,-6.8945081,107.6114806,320210
+hf_000042,Rumah Sakit Simpangan Depok,hospital,-6.4087799,106.8616926,320211
+hf_000043,Klinik Global medika,clinic,-6.8818506,107.5748257,320212
+hf_000044,Puskesmas Garuda,hospital,-6.9113899,107.5773781,320213
+hf_000045,Rumah Sakit Gigi dan Mulut Maranatha,hospital,-6.886821,107.5812491,320214
+hf_000046,Puskesmas Cikampek,clinic,-6.4048406,107.4517487,320215
+hf_000047,Puskesmas,clinic,-6.4145396,107.4881236,320216
+hf_000048,Puskesmas,clinic,-6.4177758,107.3679006,320217
+hf_000049,Puskesmas,clinic,-6.5226867,107.1721462,320218
+hf_000050,RS Annisa,hospital,-6.4828569,106.8703423,320219
+hf_000051,Natasha Skin Care,clinic,-6.9031498,107.6278431,320220
+hf_000052,ERHA Clinic,hospital,-6.9038215,107.6209995,320221
+hf_000053,AIRIN BEAUTY CARE,hospital,-6.9213387,107.6585757,320222
+hf_000054,Klinik Tirta Husada,clinic,-6.4180514,106.8264991,320223
+hf_000055,Poliklinik Telkom University,clinic,-6.9734164,107.629308,320224
+hf_000056,Rumah Bersalin Muhammadiyah,hospital,-6.8775282,107.5766801,
+hf_000057,Siloam,hospital,-6.5955895,106.8049335,
+hf_000058,Puskesmas Pembantu,clinic,-6.5480941,106.821958,
+hf_000059,Klinik Ibnu Sina,clinic,-6.5931183,106.7916054,
+hf_000060,Puskesmas Kayumanis,clinic,-6.5297272,106.7684365,
+hf_000061,klinik sukagalih,clinic,-6.8922383,107.5910247,
+hf_000062,PUSKESMAS Kec. Curugkembar,hospital,-7.2092293,106.9320855,
+hf_000063,Jaya Abadi,clinic,-6.9450171,107.6306917,
+hf_000064,Puskesmas Sukajadi,hospital,-6.8922267,107.5943825,
+hf_000065,Puskesmas Karang Setra,hospital,-6.8773932,107.5911581,
+hf_000066,Klinik Kasih jaya,hospital,-6.9665111,107.5735337,
+hf_000067,bathesda,hospital,-7.2143633,107.9091172,
+hf_000068,Klinik Pratama Bhakti Kencana,clinic,-6.9203324,107.7087704,
+hf_000069,Cimaya Medika Center,clinic,-6.820726,107.1368761,
+hf_000070,Puskesmas Cimahi Tengah,hospital,-6.8723378,107.5420574,
+hf_000071,Puskesmas Sekeloa,hospital,-6.8896755,107.6168415,
+hf_000072,Ibnu Sina Medika,clinic,-6.9378864,107.1251632,
+hf_000073,Biotest,clinic,-6.9200484,107.6123773,
+hf_000074,RSUD Bayu Asih Purwakarta,hospital,-6.5381359,107.4432128,
+hf_000075,Saint Mark Hospital,hospital,-6.7399703,107.3627494,
+hf_000076,Kilink Perdita Bandung,clinic,-6.9207341,107.7102291,
+hf_000077,RS Harapan Mulia,hospital,-6.4345659,107.069081,
+hf_000078,Rumah Sakit Harapan Mulia,hospital,-6.4348412,107.0687318,
+hf_000079,Puskesmas Pasirkaliki,clinic,-6.8884898,107.5699824,
+hf_000080,Puskesmas Mekarwangi / Public Medical Center,clinic,-6.5421511,106.7838371,
+hf_000081,RSU DR. H. Marzoeki Mahdi - Pintu Pejalan Kaki,hospital,-6.582876,106.7795998,
+hf_000082,PUSKESMAS CIMAHI UTARA,hospital,-6.874206,107.5566016,
+hf_000083,poskesdes,hospital,-7.1889194,107.2822858,
+hf_000084,Klinik Citra Medika,hospital,-6.4458328,107.0432788,
+hf_000085,Klinik Nayaka Husada (BPJS Kesehatan Faskes 1),hospital,-6.4439473,107.0416139,
+hf_000086,Posyandu Chedi,hospital,-6.4605185,106.816414,
+hf_000087,Rumah Sakit Kartini Bandung,hospital,-6.8972374,107.6345985,
+hf_000088,Klinik Hanna Medika,clinic,-6.6524377,106.9098129,
+hf_000089,Posyandu,clinic,-6.8774812,107.5788234,
+hf_000090,IGD RS PMI Bogor,hospital,-6.5980869,106.8062688,
+hf_000091,Rumah Sakit Rizky Bersalin,hospital,-6.8886552,107.6196519,
+hf_000092,RS Rumah Sehat Terpadu,hospital,-6.472592,106.7285739,
+hf_000093,RSIA Permata Pertiwi Citeureup,hospital,-6.487095,106.8777691,
+hf_000094,Klinik Tiara Bunda,clinic,-6.8823878,106.7783905,
+hf_000095,Klinik 24 Jam Dr. Sunardi,clinic,-6.6067602,106.7921873,
+hf_000096,Arora Laser & Aesthetic Clinic,clinic,-6.916531,106.936157,
+hf_000097,Primaya Hospital Sukabumi,hospital,-6.9186652,106.9577461,
+hf_000098,Klinik Dr Nur,clinic,-6.865898,107.538655,
+hf_000099,UPT Puskesmas Cipamokolan,clinic,-6.9470279,107.6763636,
+hf_000100,RS Mitra Anugrah Lestari Cimahi,hospital,-6.9007783,107.5556959,
+hf_000101,Klinik Yudisman Cimahi,clinic,-6.9024945,107.535148,
+hf_000102,Klinik Kasih Bunda Cimahi,clinic,-6.9017676,107.543727,
+hf_000103,Klinik Luhur Medika,clinic,-6.8777933,107.5497647,
+hf_000104,Dokter Juwita Ninda Suherman Sukarasa,clinic,-6.8785955,107.5809916,
+hf_000105,Klinik Cijambe 24,clinic,-6.9089943,107.6907945,
+hf_000106,Rumah Sakit Gigi dan Mulut Pendidikan Unjani,hospital,-6.8686093,107.544739,
+hf_000107,Klinik Utama Elim,clinic,-6.9198677,107.5971803,
+hf_000108,Puskesmas Pagarsih,clinic,-6.9227492,107.5930739,
+hf_000109,Klinik Irna Pratama,clinic,-6.9170582,106.916803,
+hf_000110,Klinik Jasmine MQ Medika,clinic,-6.8867752,107.6117787,
+hf_000111,Klinik Pratama Amanah,clinic,-6.9048642,107.6775519,
+hf_000112,Klinik Mutiara Cikutra,clinic,-6.9003623,107.643322,
+hf_000113,"Klinik Bidan Oon R. Herawan, M.Keb",clinic,-6.9032552,107.639416,
+hf_000114,Revital Clinic Progo,clinic,-6.9044846,107.618761,
+hf_000115,Klinik Utama Bunda Nanda,clinic,-6.9297937,107.7124259,
+hf_000116,Puskesmas Arcamanik,clinic,-6.9145472,107.6786845,
+hf_000117,Puskesmas Cibeureum,clinic,-6.9005828,107.5625614,
+hf_000118,Puskesmas Cimareme,clinic,-6.8614754,107.5018535,
+hf_000119,Puskesmas Padasuka,clinic,-6.8736153,107.5279993,
+hf_000120,Dokter Nina T Irawati,clinic,-6.8892418,107.6336995,
+hf_000121,Posyandu Anggrek IV Desa Pasirlaja,clinic,-6.5461353,106.8335259,
+hf_000122,Puskesmas Melong Asih,clinic,-6.9239086,107.563141,
+hf_000123,Klinik Utama Bandung Pain Rehab Center,hospital,-6.9029104,107.6271296,
+hf_000124,Rumah Sakit Annisa Queen,hospital,-7.213425,107.9198707,
+hf_000125,RSJ,hospital,-6.4040302,106.7582441,
+hf_000126,Puskesmas Pembantu Desa Nanggerang,clinic,-6.4254707,107.7655523,
+hf_000127,Puskesmas PONED Ciawi,hospital,-6.6630651,106.8553292,
+hf_000128,Klinik Citra Dokter 24 Jam,clinic,-6.8818215,106.7783121,
+hf_000129,Toko Obat Hudaybi,hospital,-6.4674334,106.7983748,
+hf_000130,Klinik Utama Priangan Medical & Eye Center,hospital,-6.9217294,107.5773663,
+hf_000131,Posyandu Flamboyan,clinic,-6.5411879,106.698604,
+hf_000132,Posyandu Melati,clinic,-6.5450965,106.6981104,
+hf_000133,Rumah Sakit Medina,hospital,-7.1805265,107.9770158,
+hf_000134,Rumah Sakit Nurhayati,hospital,-7.2182218,107.9213693,
+hf_000135,Klinik Al Latif,clinic,-7.0394915,107.7124665,
+hf_000136,Praktek Dokter Suhendra Medika,clinic,-6.5692761,106.7225345,
+hf_000137,Klinik Seulanga,clinic,-6.4701798,106.8520093,
+hf_000138,Praktek Dokter Rudi,clinic,-6.5743741,106.7407635,
+hf_000139,Wami Medical,clinic,-6.5771922,106.7329529,
+hf_000140,Klink Pratama Polresta Bogor Kota,clinic,-6.5800529,106.7756295,
+hf_000141,Jusmine Beauty Clinic,clinic,-6.5738312,106.7696576,
+hf_000142,Klinik 212 Dokter 24 Jam,clinic,-6.5863292,106.7587772,
+hf_000143,Pet ID Clinic,clinic,-6.5567423,106.7620743,
+hf_000144,Praktek Dokter Dr. Eldesra Mahyori,clinic,-6.5770939,106.7082229,
+hf_000145,Medikids,clinic,-6.5566351,106.7823739,
+hf_000146,B Klinik Pratama Clinic,clinic,-6.5605907,106.7883526,
+hf_000147,Praktek Dokter Bersama,clinic,-6.5623421,106.7812461,
+hf_000148,Pets Clinic by Kamo Group,clinic,-6.5667767,106.7841053,
+hf_000149,Praktek Dokter Estetika,clinic,-6.5699023,106.7855128,
+hf_000150,Klinik Tera Medika,clinic,-6.5940582,106.7871147,
+hf_000151,Klinik Farfa,clinic,-6.5626279,106.7323588,
+hf_000152,Klinik Bendungan 24 Jam,clinic,-6.6548902,106.86188,
+hf_000153,Klinik Gadog Medika,clinic,-6.6547344,106.8625458,
+hf_000154,FDC Dental Clinic,clinic,-6.5706517,106.8089902,
+hf_000155,Hanifa Medika,clinic,-6.5739431,106.7606266,
+hf_000156,N-Vy Clinic & Beauty Bar,clinic,-6.5619737,106.7928211,
+hf_000157,Klinik Sunat Ar Rasyid,clinic,-6.6061061,106.7955355,
+hf_000158,Klinik Pratama Siloam Klinik,clinic,-6.6102373,106.7985007,
+hf_000159,Praktik Dokter Dr. Lidya K. H,clinic,-6.6513509,106.9066299,
+hf_000160,Klinik Sarua Medika,clinic,-6.6696453,106.9261403,
+hf_000161,Klinik Safari Medika,clinic,-6.6865045,106.9441299,
+hf_000162,Praktek Dokter Tugu,clinic,-6.6856927,106.9558632,
+hf_000163,Praktik Dokter Adisty,clinic,-6.559357,106.6914685,
+hf_000164,Praktik Dokter Dr. Mirra F,clinic,-6.559411,106.6887152,
+hf_000165,Klinik Mutiara Indah Lestari,clinic,-6.6008825,106.7830794,
+hf_000166,Klinik Pelangi Kasih,clinic,-6.6156939,106.8093275,
+hf_000167,Praktik Dokter Marnaningsih,clinic,-6.6102339,106.804538,
+hf_000168,Klinik Rosalina,clinic,-6.607795,106.8020406,
+hf_000169,Yapni Medika,clinic,-6.6258862,106.8215892,
+hf_000170,Klinik Galaxy Medika,clinic,-6.6260288,106.821854,
+hf_000171,DNA Favorit,clinic,-6.6363641,106.8287285,
+hf_000172,Praktek Dr. Vency Tjahyaputra,clinic,-6.6399189,106.8347193,
+hf_000173,Clafidsya Aesthetic Clinic,clinic,-6.9296213,107.6160722,
+hf_000174,Klinik Kimia Farma,clinic,-6.9072528,107.6032083,
+hf_000175,Klinik Pertamina IHC Bogor,clinic,-6.5698043,106.8131872,
+hf_000176,Klinik Pratama Circum,clinic,-6.575795,106.8178321,
+hf_000177,FDC Dental Clinic,clinic,-6.5808883,106.8179139,
+hf_000178,Klinik Arkatama,clinic,-6.5826069,106.8179293,
+hf_000179,Praktik Dokter Lidya Setyawati,clinic,-6.5838699,106.8172447,
+hf_000180,The Clinic Beautylosophy,clinic,-6.5839205,106.8171971,
+hf_000181,Praktik Dr. Ukes Kasmarawati,clinic,-6.5905851,106.8170173,
+hf_000182,Klinik Pratama MS Glow,clinic,-6.5817736,106.8161637,
+hf_000183,Estrella Clinic,clinic,-6.5818908,106.8156809,
+hf_000184,Klinik Pratama Pelita Sehat,clinic,-6.5818781,106.8155636,
+hf_000185,7 Glow Clinic,clinic,-6.5810115,106.8123852,
+hf_000186,Klink Harapan Sehat,clinic,-6.8848537,107.1255542,
+hf_000187,Rumah Sakit Umum Pindad Bandung,hospital,-6.939894,107.6467896,
+hf_000188,Klinik Pratama Kasih Bunda Yanti,hospital,-6.8341636,107.3529321,
+hf_000189,Poskesdes Desa Tarumajaya,clinic,-7.2043488,107.663898,
+hf_000190,Puskesmas Kertasari,clinic,-7.1937749,107.6752961,
+hf_000191,Posyandu Lestari,clinic,-7.1918356,107.678277,
+hf_000192,Posyandu Melati RW 04,clinic,-7.1866531,107.6811781,
+hf_000193,Posyandu Kuntum,clinic,-7.1866368,107.6818688,
+hf_000194,Posyandu,clinic,-7.2127183,107.6735017,
+hf_000195,Posyandu Jadi Harapan,clinic,-7.2737053,106.8372741,
+hf_000196,Puskesmas Sukamanah,hospital,-7.2048585,107.5905853,
+hf_000197,Edelweiss Hospital,hospital,-6.94367,107.6494291,
+hf_000198,UPTD Puskesmas Maracang,hospital,-6.5240596,107.4353434,
+hf_000199,Klinik Annisa,hospital,-6.519791,107.4324196,
+hf_000200,RS Karina Medika Purwakarta,hospital,-6.5317675,107.4394453,
+hf_000201,Klinik Utama Shanaya Purwakarta,hospital,-6.5312543,107.4366743,
+hf_000202,Rumah Sakit Muhammadiyah Bandung Selatan,hospital,-7.0224752,107.6800118,
+hf_000203,RSUD Cileungsi,hospital,-6.4329076,107.0485916,
+hf_000204,Aude Dental,hospital,-6.4090417,106.9763259,
+hf_000205,rumah sakit,hospital,-6.6479926,106.8600159,
+hf_000206,Klinik Salsabilla,clinic,-6.4765329,106.844518,
+hf_000207,Puskesmas Parungkuda,hospital,-6.8443613,106.7606427,
+hf_000208,Puskesmas Tajurhalang,clinic,-6.4804189,106.7582624,
+hf_000209,Puskesmas Cimanggis,clinic,-6.505439,106.7754344,
+hf_000210,Puskesmas Cisolok,clinic,-6.9516139,106.4486265,
+hf_000211,Pos Yandu 1,clinic,-6.9515762,106.4404013,
+hf_000212,Posyandu Tugu 1,clinic,-6.9463765,106.4484242,
+hf_000213,Bidan desa,clinic,-6.9457622,106.4463686,
+hf_000214,Apotek,clinic,-6.9456112,106.4472073,
+hf_000215,PMB Tati Suminar,clinic,-6.9519713,106.4422008,
+hf_000216,Posyandu melati,clinic,-6.9487414,106.4486925,
+hf_000217,Posyandu semangka,clinic,-7.0343787,106.5686812,
+hf_000218,Posyandu amanah,clinic,-7.0300877,106.5670641,
+hf_000219,Puskesmas simpenan,hospital,-7.0251547,106.5640666,
+hf_000220,Posyandu plamboyan,clinic,-7.0247144,106.5651316,
+hf_000221,Posyandu cikiray,clinic,-7.0208961,106.5643548,
+hf_000222,Klinik yazky medico,clinic,-7.0300553,106.5667134,
+hf_000223,Posyandu pepaya,clinic,-7.0311658,106.5584053,
+hf_000224,Posyandu Dahlia,clinic,-6.9494695,106.4538809,
+hf_000225,Posyandu RT.001/ RW.002,clinic,-6.952175,106.4487373,
+hf_000226,UPP PELABUHANRATU,clinic,-6.9814436,106.5403946,
+hf_000227,Posyandu citiis dua,clinic,-6.9504464,106.4440051,
+hf_000228,Posyandu Citiis Satu RW.005,clinic,-6.947604,106.4456759,
+hf_000229,Posyandu Mangga 2,clinic,-7.0337651,106.5799599,
+hf_000230,Posyandu Apel,clinic,-7.0324764,106.577055,
+hf_000231,Posyandu Mangga 1,clinic,-7.0342307,106.5793993,
+hf_000232,Posyandu Anggur,clinic,-7.0403235,106.5850033,
+hf_000233,Posyandu strowbery dan manggis,clinic,-7.0425038,106.5930874,
+hf_000234,Posyandu tomat,clinic,-7.0379889,106.5972618,
+hf_000235,Posyandu buah jeruk,clinic,-7.037746,106.5825608,
+hf_000236,klinik pamily,clinic,-7.0198434,106.564219,
+hf_000237,Posyandu pajagan 2,clinic,-6.952137,106.4392692,
+hf_000238,Praktek bidan santi,clinic,-7.0179248,106.564969,
+hf_000239,Posyandu bunga ros,clinic,-7.0202278,106.5585576,
+hf_000240,Praktek dokter umum dr. Yati mulyati,clinic,-7.0140291,106.568701,
+hf_000241,Puskesmas Pasirkaliki,clinic,-6.9005782,107.5976838,
+hf_000242,Puskesmas DTP Cisurupan,clinic,-7.3066652,107.7957901,
+hf_000243,Puskesmas Pembantu Desa Tonjong,clinic,-7.0007965,106.6146348,
+hf_000244,Puskesmas Pembantu Desa Cikadu,clinic,-6.9824,106.6063582,
+hf_000245,KLINIK WANASARI MEDIKA,clinic,-6.6626018,107.5435775,
+hf_000246,Klinik Aizar Medika Cisolok,clinic,-6.9558111,106.4303114,
+hf_000247,Klinik Masagi,hospital,-6.9269276,107.6011784,
+hf_000248,Poskesdes Cipanjalu,clinic,-6.862007,107.7321219,
+hf_000249,Klinik Medika Pratama Manglid,clinic,-6.9696733,107.5691746,
+hf_000250,Allive Clinic | Klinik Pratama Allive,clinic,-6.9623685,107.553343,
+hf_000251,Laboratorium Prodia Bandung Kopo,clinic,-6.9632828,107.5823251,
+hf_000252,"dr Abdul Wahid, Internist",clinic,-6.8151625,107.1325126,
+hf_000253,Keisha Skin Care,clinic,-6.8151133,107.1324081,
+hf_000254,Klinik Ananda,clinic,-6.8161102,107.1343915,
+hf_000255,Klinik Pratama Asri,clinic,-6.8143373,107.1392856,
+hf_000256,Klinik Graha Medika,clinic,-6.8154162,107.1328384,
+hf_000257,RS Karya Husada,hospital,-6.4007286,107.4440933,
+hf_000258,dr. Rizki Febrina & dr. Fauzia Rachman,clinic,-6.9267529,106.9333094,
+hf_000259,Metiawati,clinic,-6.9185041,106.9322744,
