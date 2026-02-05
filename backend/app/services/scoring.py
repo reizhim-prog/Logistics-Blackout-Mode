@@ -43,7 +43,6 @@ def score_event(
     air_df = air_df.dropna(subset=["lat", "lon", "name"])
 
     # nearest health (name + km)
-    # IMPORTANT: use name col from your CSV = "name"
     h_km, h_name, _ = nearest_points_for_admins(
         df[["lat", "lon", "admin_id", "admin_name", "kabupaten"]],
         health_df[["lat", "lon", "name", "type"]].rename(columns={"name": "name"}),
@@ -65,7 +64,7 @@ def score_event(
     out["nearest_health_km"] = np.round(h_km, 3)
     out["nearest_health_name"] = h_name.astype(str)
 
-    # optional: nearest air node
+   
     if "air_nodes.csv" in dfs:
         air_df = dfs["air_nodes.csv"].copy()
         a_km, a_name, a_type = nearest_points_for_admins(
@@ -77,7 +76,7 @@ def score_event(
         out["nearest_air_name"] = a_name.astype(str)
         out["nearest_air_type"] = a_type.astype(str) if a_type is not None else ""
 
-    # reasons (lebih masuk akal: pakai angka)
+
     reasons = []
     for i in range(len(out)):
         rs = []

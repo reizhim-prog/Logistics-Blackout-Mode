@@ -1,8 +1,8 @@
 import pandas as pd
 from pathlib import Path
 
-BASE = Path(__file__).resolve().parents[2]   # ini menunjuk ke folder backend/app
-p = BASE.parent / "data" / "processed" / "air_nodes.csv"  # naik ke backend/, lalu ke data/processed
+BASE = Path(__file__).resolve().parents[2]   
+p = BASE.parent / "data" / "processed" / "air_nodes.csv"  
 
 air = pd.read_csv(p)
 air["lat"] = pd.to_numeric(air["lat"], errors="coerce")

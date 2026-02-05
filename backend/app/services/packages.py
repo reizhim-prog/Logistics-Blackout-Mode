@@ -1,5 +1,5 @@
 def recommend_package(mag: float):
-    # rule sederhana untuk demo
+    
     if mag is None:
         return ["medis_dasar", "selimut"]
 
